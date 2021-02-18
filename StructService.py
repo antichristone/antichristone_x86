@@ -1,8 +1,9 @@
 from StructPacket import Service
 from config import services
-import random, time
+import random
 
-class Distribution_Service():
+
+class Distribution_Service:
     def __init__(self):
         self.number_attack = Service()
         self.services = services
@@ -15,6 +16,10 @@ class Distribution_Service():
             self.request_service(random.choice(self.services))
         except Exception:
             pass
+
+    def all_services(self):
+        for service in self.services:
+            self.request_service(service)
 
     def request_service(self, service):
         try:

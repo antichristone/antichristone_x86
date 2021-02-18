@@ -1,5 +1,5 @@
 import sys, os
-from StructService import Distribution_Service
+from antichristone_x86.StructService import Distribution_Service
 from config import attack
 
 attack_number_phone=Distribution_Service()
